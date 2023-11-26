@@ -13,29 +13,29 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://example.com/2023/11/26/leaftl-学习型ftl/"/>
+    <link rel="canonical" href="http://example.com/2023/11/26/lea/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
         <meta name="description" content="LeaFTL: A Learning-Based Flash Translation Layer for Solid-State Drives DFTL: A Flash Translation Layer Employing Demand-basedSelective Caching of Page-level Address Mappings S-FTL: An Efﬁcient Addr">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeaFTL-学习型FTL">
-<meta property="og:url" content="http://example.com/2023/11/26/LeaFTL-%E5%AD%A6%E4%B9%A0%E5%9E%8BFTL/index.html">
+<meta property="og:title" content="lea">
+<meta property="og:url" content="http://example.com/2023/11/26/lea/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="LeaFTL: A Learning-Based Flash Translation Layer for Solid-State Drives DFTL: A Flash Translation Layer Employing Demand-basedSelective Caching of Page-level Address Mappings S-FTL: An Efﬁcient Addr">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/image-20231118201754296.png">
-<meta property="og:image" content="http://example.com/image-20231118220459363.png">
-<meta property="og:image" content="http://example.com/image-20231119143754187.png">
-<meta property="og:image" content="http://example.com/image-20231119143941746.png">
-<meta property="og:image" content="http://example.com/image-20231119142937070.png">
-<meta property="article:published_time" content="2023-11-26T09:19:51.000Z">
-<meta property="article:modified_time" content="2023-11-26T09:36:16.635Z">
+<meta property="og:image" content="http://example.com/lea/image-20231118201754296.png">
+<meta property="og:image" content="http://example.com/lea/image-20231118220459363.png">
+<meta property="og:image" content="http://example.com/lea/image-20231119143754187.png">
+<meta property="og:image" content="http://example.com/lea/image-20231119143941746.png">
+<meta property="og:image" content="http://example.com/lea/image-20231119142937070.png">
+<meta property="article:published_time" content="2023-11-26T09:45:43.000Z">
+<meta property="article:modified_time" content="2023-11-26T09:48:17.489Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="论文阅读">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/image-20231118201754296.png">
+<meta name="twitter:image" content="http://example.com/lea/image-20231118201754296.png">
     
     
     <!--- Icon Part-->
@@ -47,7 +47,7 @@
     
     <title>
         
-            LeaFTL-学习型FTL -
+            lea -
         
         金光闪闪
     </title>
@@ -215,7 +215,7 @@
         <div class="article-title relative w-full">
             
                 <div class="w-full flex items-center pt-6 justify-start">
-                    <h1 class="article-title-regular text-second-text-color text-4xl md:text-6xl font-bold px-2 sm:px-6 md:px-8 py-3">LeaFTL-学习型FTL</h1>
+                    <h1 class="article-title-regular text-second-text-color text-4xl md:text-6xl font-bold px-2 sm:px-6 md:px-8 py-3">lea</h1>
                 </div>
             
             </div>
@@ -236,15 +236,15 @@
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2023-11-26 17:19:51</span>
-        <span class="mobile">2023-11-26 17:19:51</span>
+        <span class="desktop">2023-11-26 17:45:43</span>
+        <span class="mobile">2023-11-26 17:45:43</span>
         <span class="hover-info">Created</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2023-11-26 17:36:16</span>
-            <span class="mobile">2023-11-26 17:36:16</span>
+            <span class="desktop">2023-11-26 17:48:17</span>
+            <span class="mobile">2023-11-26 17:48:17</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -289,7 +289,7 @@
 <li>S-FTL: An Efﬁcient Address Translation for Flash<br>Memory by Exploiting Spatial Locality</li>
 </ul>
 </blockquote>
-<h2 id="1-背景"><a href="#1-背景" class="headerlink" title="1.背景."></a>1.背景.</h2><p>由于Flash必须写前擦除(即无法覆盖写),且擦除最小单元(Block)和写入最小单元(Page)粒度不一致,同时每个Block有一定的擦写(P&#x2F;E)寿命限制, 致使Flash-based SSDs必须采用异地更新(Out-of-place Update)以及预留空间(Over-provisioning Space),磨损均衡等策略.</p>
+<h2 id="1-背景"><a href="#1-背景" class="headerlink" title="1.背景"></a>1.背景</h2><p>由于Flash必须写前擦除(即无法覆盖写),且擦除最小单元(Block)和写入最小单元(Page)粒度不一致,同时每个Block有一定的擦写(P&#x2F;E)寿命限制, 致使Flash-based SSDs必须采用异地更新(Out-of-place Update)以及预留空间(Over-provisioning Space),磨损均衡等策略.</p>
 <p>为了向使用SSD的Host端隐藏这些复杂的物理特性带来的限制,传统SSD会通过FTL(Flash Translation Layer)——传统SSD最重要的部件之一，来完成上述工作，即:</p>
 <ul>
 <li>地址转换(Address Mapping)</li>
@@ -321,23 +321,13 @@
 </ul>
 <h3 id="SFTL"><a href="#SFTL" class="headerlink" title="SFTL"></a>SFTL</h3><p>SFTL在DFTL的基础上，在每次LRU换入时，将target entry所在的translation page中的所有entry全部换入(<strong>即增大换入换出粒度</strong>)，以最大利用空间局部性(spatial locality)。</p>
 <p>同时注意到以Page为单位进行CMT的换入换出时，mapping entry在局部上呈现一定的线性性，因此可以通过记录线性段的开头entry以及一个bitmap来表示线性段的范围,可以节省一定的空间.</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/./image-20231118201754296.png"
-                      alt="image-20231118201754296"
-                ></p>
+<p><img lazyload src="/images/loading.svg" data-src="/./lea/image-20231118201754296.png" alt="image-20231118201754296"></p>
 <h2 id="LeaFTL"><a href="#LeaFTL" class="headerlink" title="LeaFTL"></a>LeaFTL</h2><p>(同样采用Page-level mapping，不过优化思路主要是在压缩映射表的空间上.采用学习型技巧，即贪婪分段线性回归.)</p>
 <h3 id="动机"><a href="#动机" class="headerlink" title="动机:"></a>动机:</h3><p>传统Page-level的Address Mapping的SOTA方法（DFTL&#x2F;SFTL）一般都是<strong>human-driven heuristics</strong>的( i.e. 在替换策略下做功夫，力求尽可能满足程序的局部性原理,保证Cache miss尽可能减少以提高效率)，static的，无法runtime捕捉局部性特征。是否考虑通过引入Machine Learning的方法，我们可以更好地动态地捕捉到address mapping的特征.</p>
 <h3 id="设计思路"><a href="#设计思路" class="headerlink" title="设计思路:"></a>设计思路:</h3><h4 id="1-主体设计"><a href="#1-主体设计" class="headerlink" title="1.主体设计"></a>1.主体设计</h4><p><strong>1.注意到,现代SSD通常会有一个Data Buffer，每当写入数据时，首先将写入请求Buffer起来，攒满一定大小(Block)后，一次性flush到一块连续(continuous)的物理空间中.</strong></p>
 <p>若我们将Buffer里的写入请求按照LBA进行排序，保证写入请求的LPA是单调递增的.同时为这个写入的Chunk分配的物理空间(PPA也是递增的),我们可以保证<strong>写入的LPA和与对应的PPA都是单调递增的</strong>.</p>
 <p><strong>2.将这些<code>&lt;LPA,PPA&gt;</code>在LPN-PPN图中标出，可以发现大部分点对呈现局部线性性</strong></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/./image-20231118220459363.png"
-                      alt="image-20231118220459363"
-                ></p>
+<p><img lazyload src="/images/loading.svg" data-src="/./lea/image-20231118220459363.png" alt="image-20231118220459363"></p>
 <p>由此我们可以将一部分<code>&lt;LPA,PPA&gt;</code>条目用一个线性段<code>segment</code>来拟合表示,</p>
 <p>segment记录形式为:<code>&lt;起始地址，segment长度，segment斜率, segment截距&gt;</code>(经优化后这样的一个segment仅仅需要8 bytes表示),</p>
 <p>(例如<code>&lt;70, 10, 2.0, 3&gt;</code>表示<code>LPA</code>在[70, 80]间的LPA对应的PPA可以通过$PPA &#x3D; f(LPA) &#x3D; K *LPA +I &#x3D; 2.0 *LPA + 3$计算而得)</p>
@@ -353,20 +343,10 @@
 <h3 id="2-Misprediction-纠错机制"><a href="#2-Misprediction-纠错机制" class="headerlink" title="2.Misprediction(纠错机制)"></a>2.Misprediction(纠错机制)</h3><p>$\gamma-approximate$的贪婪分段线性回归得到的segment存在两种misprediction.</p>
 <ul>
 <li><p>1.segment上的实际PPA与预测PPA有$[-\gamma,\gamma]$的误差</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/./image-20231119143754187.png"
-                      alt="image-20231119143754187"
-                ></p>
+<p><img lazyload src="/images/loading.svg" data-src="/./lea/image-20231119143754187.png" alt="image-20231119143754187"></p>
 </li>
 <li><p>2.segment上有”空洞”</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/./image-20231119143941746.png"
-                      alt="image-20231119143941746"
-                ></p>
+<p><img lazyload src="/images/loading.svg" data-src="/./lea/image-20231119143941746.png" alt="image-20231119143941746"></p>
 </li>
 </ul>
 <p>**为什么允许misprediction?**一个松弛的Error bound可以保证segment的覆盖率更大</p>
@@ -390,12 +370,7 @@
 </li>
 </ul>
 <p>解决方案:采用LSM-Tree结构:segment更新时直接插入(不会造成额外的空间损失),不会造成直接的额外读,将Update所需的所有更新操作积攒起来在Compaction时一次性解决(Tail Latency反而更低?)</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/./image-20231119142937070.png"
-                      alt="image-20231119142937070"
-                ></p>
+<p><img lazyload src="/images/loading.svg" data-src="/./lea/image-20231119142937070.png" alt="image-20231119142937070"></p>
 <p><strong>当且仅当Update的Segment将与其发生overleap的victim segment的所有LPA全部覆盖，才会将victim segment标记为invalid(需要额外访存更新相关meta data)，否则segment就是valid的(无需额外访存)，将其压入下一层level，等到后续主动compaction才会统一回收处理.若被压入下一层的segment依然发生overlap,则直接创建一个新的level将其放入其中，以防止递归下降.</strong></p>
 
         </div>
@@ -404,18 +379,18 @@
             <div class="post-copyright-info my-8 px-2 sm:px-6 md:px-8">
                 <div class="article-copyright-info-container">
     <ul>
-        <li><strong>Title:</strong> LeaFTL-学习型FTL</li>
+        <li><strong>Title:</strong> lea</li>
         <li><strong>Author:</strong> yeyeye</li>
         <li><strong>Created at
-                :</strong> 2023-11-26 17:19:51</li>
+                :</strong> 2023-11-26 17:45:43</li>
         
             <li>
                 <strong>Updated at
-                    :</strong> 2023-11-26 17:36:16
+                    :</strong> 2023-11-26 17:48:17
             </li>
         
         <li>
-            <strong>Link:</strong> https://redefine.ohevan.com/2023/11/26/LeaFTL-学习型FTL/
+            <strong>Link:</strong> https://redefine.ohevan.com/2023/11/26/lea/
         </li>
         <li>
             <strong>
@@ -515,8 +490,8 @@
             <div class="post-toc-wrap">
     <div class="post-toc">
         <div class="toc-title">On this page</div>
-        <div class="page-title">LeaFTL-学习型FTL</div>
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E8%83%8C%E6%99%AF"><span class="nav-text">1.背景.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%B0%E6%9C%89%E5%B7%A5%E4%BD%9C"><span class="nav-text">现有工作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#DFTL"><span class="nav-text">DFTL</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SFTL"><span class="nav-text">SFTL</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LeaFTL"><span class="nav-text">LeaFTL</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A8%E6%9C%BA"><span class="nav-text">动机:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%B7%AF"><span class="nav-text">设计思路:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Misprediction-%E7%BA%A0%E9%94%99%E6%9C%BA%E5%88%B6"><span class="nav-text">2.Misprediction(纠错机制)</span></a></li></ol></li></ol>
+        <div class="page-title">lea</div>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E8%83%8C%E6%99%AF"><span class="nav-text">1.背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%B0%E6%9C%89%E5%B7%A5%E4%BD%9C"><span class="nav-text">现有工作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#DFTL"><span class="nav-text">DFTL</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SFTL"><span class="nav-text">SFTL</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LeaFTL"><span class="nav-text">LeaFTL</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A8%E6%9C%BA"><span class="nav-text">动机:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%B7%AF"><span class="nav-text">设计思路:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Misprediction-%E7%BA%A0%E9%94%99%E6%9C%BA%E5%88%B6"><span class="nav-text">2.Misprediction(纠错机制)</span></a></li></ol></li></ol>
 
     </div>
 </div>
