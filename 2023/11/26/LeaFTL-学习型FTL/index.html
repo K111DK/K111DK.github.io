@@ -31,7 +31,7 @@
 <meta property="og:image" content="http://example.com/image-20231119143941746.png">
 <meta property="og:image" content="http://example.com/image-20231119142937070.png">
 <meta property="article:published_time" content="2023-11-26T09:19:51.000Z">
-<meta property="article:modified_time" content="2023-11-26T09:32:34.990Z">
+<meta property="article:modified_time" content="2023-11-26T09:36:16.635Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="论文阅读">
 <meta name="twitter:card" content="summary">
@@ -243,8 +243,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2023-11-26 17:32:34</span>
-            <span class="mobile">2023-11-26 17:32:34</span>
+            <span class="desktop">2023-11-26 17:36:16</span>
+            <span class="mobile">2023-11-26 17:36:16</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -324,7 +324,7 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/image-20231118201754296.png"
+                     data-src="/./image-20231118201754296.png"
                       alt="image-20231118201754296"
                 ></p>
 <h2 id="LeaFTL"><a href="#LeaFTL" class="headerlink" title="LeaFTL"></a>LeaFTL</h2><p>(同样采用Page-level mapping，不过优化思路主要是在压缩映射表的空间上.采用学习型技巧，即贪婪分段线性回归.)</p>
@@ -335,7 +335,7 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/image-20231118220459363.png"
+                     data-src="/./image-20231118220459363.png"
                       alt="image-20231118220459363"
                 ></p>
 <p>由此我们可以将一部分<code>&lt;LPA,PPA&gt;</code>条目用一个线性段<code>segment</code>来拟合表示,</p>
@@ -356,7 +356,7 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/image-20231119143754187.png"
+                     data-src="/./image-20231119143754187.png"
                       alt="image-20231119143754187"
                 ></p>
 </li>
@@ -364,7 +364,7 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/image-20231119143941746.png"
+                     data-src="/./image-20231119143941746.png"
                       alt="image-20231119143941746"
                 ></p>
 </li>
@@ -393,7 +393,7 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/image-20231119142937070.png"
+                     data-src="/./image-20231119142937070.png"
                       alt="image-20231119142937070"
                 ></p>
 <p><strong>当且仅当Update的Segment将与其发生overleap的victim segment的所有LPA全部覆盖，才会将victim segment标记为invalid(需要额外访存更新相关meta data)，否则segment就是valid的(无需额外访存)，将其压入下一层level，等到后续主动compaction才会统一回收处理.若被压入下一层的segment依然发生overlap,则直接创建一个新的level将其放入其中，以防止递归下降.</strong></p>
@@ -411,7 +411,7 @@
         
             <li>
                 <strong>Updated at
-                    :</strong> 2023-11-26 17:32:34
+                    :</strong> 2023-11-26 17:36:16
             </li>
         
         <li>
