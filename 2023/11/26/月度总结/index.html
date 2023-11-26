@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="yeyeye">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="http://example.com/2023/11/26/月度总结/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+        <meta name="description" content="月初目标 阅读学习型FTL(ASPLOS LeaFTL),首次提出学习型FTL的概念，能否将学习型技巧应用到ZNS SSDs上提高Address Mapping乃至GC的效率?   工作内容1.阅读LeaFTL及其源码，了解相关技术背景和基本原理.  LeaFTL: A Learning-Based Flash Translation Layer for Solid-State Drives D">
+<meta property="og:type" content="article">
+<meta property="og:title" content="月度总结">
+<meta property="og:url" content="http://example.com/2023/11/26/%E6%9C%88%E5%BA%A6%E6%80%BB%E7%BB%93/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="月初目标 阅读学习型FTL(ASPLOS LeaFTL),首次提出学习型FTL的概念，能否将学习型技巧应用到ZNS SSDs上提高Address Mapping乃至GC的效率?   工作内容1.阅读LeaFTL及其源码，了解相关技术背景和基本原理.  LeaFTL: A Learning-Based Flash Translation Layer for Solid-State Drives D">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="c:\Users\35802\AppData\Roaming\Typora\typora-user-images\image-20231118201754296.png">
+<meta property="og:image" content="c:\Users\35802\AppData\Roaming\Typora\typora-user-images\image-20231118220459363.png">
+<meta property="og:image" content="c:\Users\35802\AppData\Roaming\Typora\typora-user-images\image-20231119143754187.png">
+<meta property="og:image" content="c:\Users\35802\AppData\Roaming\Typora\typora-user-images\image-20231119143941746.png">
+<meta property="og:image" content="c:\Users\35802\AppData\Roaming\Typora\typora-user-images\image-20231119142937070.png">
+<meta property="og:image" content="c:\Users\35802\AppData\Roaming\Typora\typora-user-images\image-20231119092629520.png">
+<meta property="og:image" content="c:\Users\35802\AppData\Roaming\Typora\typora-user-images\image-20231119082816431.png">
+<meta property="article:published_time" content="2023-11-26T09:00:36.000Z">
+<meta property="article:modified_time" content="2023-11-26T09:01:54.756Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:\Users\35802\AppData\Roaming\Typora\typora-user-images\image-20231118201754296.png">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/redefine-favicon.svg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/redefine-favicon.svg">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/redefine-favicon.svg">
+    <!--- Page Info-->
+    
+    <title>
+        
+            月度总结 -
+        
+        金光闪闪
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        
+<link rel="stylesheet" href="/assets/build/styles.css">
+
+    
+
+    
+<link rel="stylesheet" href="/fonts/fonts.css">
+
+    
+<link rel="stylesheet" href="/fonts/Satoshi/satoshi.css">
+
+    
+<link rel="stylesheet" href="/fonts/Chillax/chillax.css">
+
+    <!--- Font Part-->
+    
+    
+    
+    
+
+    <!--- Inject Part-->
+    
+    <script id="hexo-configurations">
+    window.config = {"hostname":"example.com","root":"/","language":"en"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"title_alignment":"left"},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Theme Redefine","subtitle":{"text":[],"hitokoto":{"enable":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"links":{"github":null,"instagram":null,"zhihu":null,"twitter":null,"email":null},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.5.6","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"}},"search":{"enable":false,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"links":null},"article_date_format":"auto","categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2022/8/17 11:45:14"};
+    window.lang_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+    window.data = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+    
+    
+    
+    
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="swup-progress-icon">
+            <i class="fa-solid fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container" id="swup">
+
+    
+
+    <div class="main-content-container">
+
+
+        <div class="main-content-header">
+            <header class="navbar-container">
+    
+    <div class="navbar-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                金光闪闪
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-house"></i>
+                                        
+                                        HOME
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="navbar-drawer w-full absolute top-0 left-0 bg-background-color">
+        <ul class="drawer-navbar-list flex flex-col justify-start items-center">
+            
+                
+                    <li class="drawer-navbar-item text-base my-1.5 flex justify-center items-center">
+                        <a class="rounded-3xl py-1.5 px-5 hover:border hover:!text-primary active:!text-primary group " 
+                        href="/"  >
+                             
+                                
+                                    <i class="fa-regular fa-house"></i>
+                                
+                                HOME
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="main-content-body">
+
+            
+
+            <div class="main-content">
+
+                
+                    <div class="post-page-container">
+    <div class="article-content-container">
+
+        <div class="article-title relative w-full">
+            
+                <div class="w-full flex items-center pt-6 justify-start">
+                    <h1 class="article-title-regular text-second-text-color text-4xl md:text-6xl font-bold px-2 sm:px-6 md:px-8 py-3">月度总结</h1>
+                </div>
+            
+            </div>
+
+        
+            <div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+                <div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+                    <img src="/images/redefine-avatar.svg">
+                </div>
+                <div class="info flex flex-col justify-between">
+                    <div class="author flex items-center">
+                        <span class="name text-default-text-color text-lg font-semibold">yeyeye</span>
+                        
+                            <span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv1</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2023-11-26 17:36</span>
+        <span class="mobile">2023-11-26 17:36</span>
+        <span class="hover-info">Created</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2023-11-26 17:01:54</span>
+            <span class="mobile">2023-11-26 17:01:54</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        
+
+
+        <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+            <hr>
+<h2 id="月初目标"><a href="#月初目标" class="headerlink" title="月初目标"></a>月初目标</h2><ul>
+<li>阅读学习型FTL(<strong>ASPLOS LeaFTL</strong>),首次提出学习型FTL的概念，能否将<strong>学习型技巧</strong>应用到ZNS SSDs上提高Address Mapping乃至GC的效率?</li>
+</ul>
+<hr>
+<h2 id="工作内容"><a href="#工作内容" class="headerlink" title="工作内容"></a>工作内容</h2><h3 id="1-阅读LeaFTL及其源码，了解相关技术背景和基本原理"><a href="#1-阅读LeaFTL及其源码，了解相关技术背景和基本原理" class="headerlink" title="1.阅读LeaFTL及其源码，了解相关技术背景和基本原理."></a>1.阅读LeaFTL及其源码，了解相关技术背景和基本原理.</h3><blockquote>
+<ul>
+<li>LeaFTL: A Learning-Based Flash Translation Layer for Solid-State Drives</li>
+<li>DFTL: A Flash Translation Layer Employing Demand-based<br>Selective Caching of Page-level Address Mappings</li>
+<li>S-FTL: An Efﬁcient Address Translation for Flash<br>Memory by Exploiting Spatial Locality</li>
+</ul>
+</blockquote>
+<p>由于Flash必须写前擦除(即无法覆盖写),且擦除最小单元(Block)和写入最小单元(Page)粒度不一致,同时每个Block有一定的擦写(P&#x2F;E)寿命限制, 致使Flash-based SSDs必须采用异地更新(Out-of-place Update)以及预留空间(Over-provisioning Space),磨损均衡等策略.</p>
+<p>为了向使用SSD的Host端隐藏这些复杂的物理特性带来的限制,传统SSD会通过FTL(Flash Translation Layer)——传统SSD最重要的部件之一，来完成上述工作，即:</p>
+<ul>
+<li>地址转换(Address Mapping)</li>
+<li>磨损均衡(Wear-leveling)</li>
+<li>垃圾回收(Garbage Collection)</li>
+</ul>
+<p>三项工作. 其中Address Mapping负责从逻辑地址到物理地址的映射.而映射表通常Cache在SSD自带的DRAM中,以便快速完成映射.</p>
+<p>其中Address Mapping又根据映射粒度的不同分为三类:</p>
+<ul>
+<li>Page Level</li>
+<li>Block Level</li>
+<li>Hybrid Level</li>
+</ul>
+<p>后两类映射尽管拥有不错的空间效率，但会加剧写放大问题，致使读写性能相当差，故市场上主流现代SSDs都采用Page级映射.</p>
+<p>Page级映射的最大问题就是空间开销大,传统SSD下Page级映射的每个条目大小为8 bytes(LPN:4 + PPN:4),在4 KB Page下，平均每1TB的SSD存储空间就需要1GB的空间来存储映射表，这样的空间开销对于SSD的DRAM来说太大了.因此只有部分映射表能被Cache到DRAM中.每当DRAM中不存在目标映射条目，就必须访问Flash内存寻找特定映射条目，这会带来很大的性能损失.</p>
+<p>因此，主要的优化思路有以下两个:</p>
+<ul>
+<li>选取合适的替换策略，保证高频访问的映射条目都尽可能被Cache到DRAM中，减少Miss次数</li>
+<li>压缩映射表的空间大小，保证不损失过多查表性能的前提下把尽可能多的映射条目Cache到DRAM中</li>
+</ul>
+<h4 id="DFTL"><a href="#DFTL" class="headerlink" title="DFTL"></a>DFTL</h4><p>DFTL的思路非常简单，采用类似于TLB中LRU这样的缓存替换机制应用到FTL上.</p>
+<p>首先所有的Mapping entry都会被持久化存储到Flash中，(专门存储Mapping entry的Page称为Translation Page).</p>
+<p>我们把它们称为<strong>Global Mapping Table(GMT)</strong>. 为了加快地址转换的速度，GMT中的部分条目会被Cache到SSD自带的DRAM中，我们把这部分Entry称为<strong>Cache Mapping Table(CMT)</strong>.同时为了快速得到mapping entry在Flash中的位置, 由**Global Translation Directory(GTD)**来记录所有mapping entry的位置,通常都是全部Cache在DRAM中.</p>
+<p>DFTL具体策略:</p>
+<ul>
+<li>每当需要进行一次地址转换,在CMT中查找，若找到则直接返回，否则根据GTD找到目标entry在Flash中的位置，从Flash中读出该entry，并Cache到CMT中，若CMT已满，则采用LRU策略腾空一个位置放入.</li>
+<li>Lazy coping:直接更新CMT,等到被更改元素被换出时才对Flash中的GMT以及GTD进行更新.</li>
+<li>Batch update:”Moreover, multiple valid data pages in the victim may have their virtual-to-<br>physical address translations present in the same translation-page. By combining all these modiﬁcations into a<br>single batch update, we reduce a number of redundant updates”</li>
+</ul>
+<h4 id="SFTL"><a href="#SFTL" class="headerlink" title="SFTL"></a>SFTL</h4><p>SFTL在DFTL的基础上，在每次LRU换入时，将target entry所在的translation page中的所有entry全部换入(<strong>即增大换入换出粒度</strong>)，以最大利用空间局部性(spatial locality)。</p>
+<p>同时注意到以Page为单位进行CMT的换入换出时，mapping entry在局部上呈现一定的线性性，因此可以通过记录线性段的开头entry以及一个bitmap来表示线性段的范围,可以节省一定的空间.</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="C:\Users\35802\AppData\Roaming\Typora\typora-user-images\image-20231118201754296.png"
+                      alt="image-20231118201754296"
+                ></p>
+<h4 id="LeaFTL"><a href="#LeaFTL" class="headerlink" title="LeaFTL"></a>LeaFTL</h4><p>(同样采用Page-level mapping，不过优化思路主要是在压缩映射表的空间上.采用学习型技巧，即贪婪分段线性回归.)</p>
+<h5 id="动机"><a href="#动机" class="headerlink" title="动机:"></a>动机:</h5><p>传统Page-level的Address Mapping的SOTA方法（DFTL&#x2F;SFTL）一般都是<strong>human-driven heuristics</strong>的( i.e. 在替换策略下做功夫，力求尽可能满足程序的局部性原理,保证Cache miss尽可能减少以提高效率)，static的，无法runtime捕捉局部性特征。是否考虑通过引入Machine Learning的方法，我们可以更好地动态地捕捉到address mapping的特征.</p>
+<h5 id="设计思路"><a href="#设计思路" class="headerlink" title="设计思路:"></a>设计思路:</h5><p><strong>1.注意到,现代SSD通常会有一个Data Buffer，每当写入数据时，首先将写入请求Buffer起来，攒满一定大小(Block)后，一次性flush到一块连续(continuous)的物理空间中.</strong></p>
+<p>若我们将Buffer里的写入请求按照LBA进行排序，保证写入请求的LPA是单调递增的.同时为这个写入的Chunk分配的物理空间(PPA也是递增的),我们可以保证<strong>写入的LPA和与对应的PPA都是单调递增的</strong>.</p>
+<p><strong>2.将这些<code>&lt;LPA,PPA&gt;</code>在LPN-PPN图中标出，可以发现大部分点对呈现局部线性性</strong></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="C:\Users\35802\AppData\Roaming\Typora\typora-user-images\image-20231118220459363.png"
+                      alt="image-20231118220459363"
+                ></p>
+<p>由此我们可以将一部分<code>&lt;LPA,PPA&gt;</code>条目用一个线性段<code>segment</code>来拟合表示,</p>
+<p>segment记录形式为:<code>&lt;起始地址，segment长度，segment斜率, segment截距&gt;</code>(经优化后这样的一个segment仅仅需要8 bytes表示),</p>
+<p>(例如<code>&lt;70, 10, 2.0, 3&gt;</code>表示<code>LPA</code>在[70, 80]间的LPA对应的PPA可以通过$PPA &#x3D; f(LPA) &#x3D; K *LPA +I &#x3D; 2.0 *LPA + 3$计算而得)</p>
+<p><strong>而点对的线性拟合可以通过贪婪分段线性回归完成,算法时间复杂度为$O(N)$，空间复杂度为$O(1)$.</strong></p>
+<p>由此:</p>
+<ul>
+<li><strong>在SSD写入前, 对Buffer的写入请求按照LPA进行重排,并进行分段线性回归,可以得到若干segment</strong>.</li>
+<li><strong>单个segment大小为8 bytes, 可以覆盖多个&lt;LPN,PPN&gt;映射条目(每个4 bytes)（实验表明有98%的segment可以覆盖到至多128个&lt;LPN,PPN&gt;点对）</strong></li>
+<li><strong>Segment可以节省空间,即便在最坏情况下,空间开销也不会比原来的Page-level更差</strong></li>
+<li><strong>我们通过segment,可以在$O(1)$内计算得到segment内的LPA对应的PPA.</strong></li>
+</ul>
+<p><strong>我们可以用写入性能上的一些损失(重排&#x2F;线性回归)换取Address Mapping映射表空间开销上的减少.</strong></p>
+<h5 id="3-Misprediction-纠错机制"><a href="#3-Misprediction-纠错机制" class="headerlink" title="3.Misprediction(纠错机制)"></a>3.Misprediction(纠错机制)</h5><p>$\gamma-approximate$的贪婪分段线性回归得到的segment存在两种misprediction.</p>
+<ul>
+<li><p>1.segment上的实际PPA与预测PPA有$[-\gamma,\gamma]$的误差</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="C:\Users\35802\AppData\Roaming\Typora\typora-user-images\image-20231119143754187.png"
+                      alt="image-20231119143754187"
+                ></p>
+</li>
+<li><p>2.segment上有”空洞”</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="C:\Users\35802\AppData\Roaming\Typora\typora-user-images\image-20231119143941746.png"
+                      alt="image-20231119143941746"
+                ></p>
+</li>
+</ul>
+<p>**为什么允许misprediction?**一个松弛的Error bound可以保证segment的覆盖率更大</p>
+<p><strong>如何处理这类misprediction?</strong></p>
+<p>1.approximate segment计算出来的PPA实际上可能在实际PPA的$[-\gamma,\gamma]$范围内,我们可以在每个flash page的OOB区域存储page对应的LPA，每次计算得到PPA时访问对应的Page并检查其OOB中的反向映射信息，若正确则表面计算的PPA就是实际的PPA，<strong>否则我们需要在该不正确的PPA的OOB中存储在$[PPA-\gamma,PPA+\gamma]$范围内的PPA对应的正确LPA</strong>,在额外花费$\log(\gamma)$的查询代价就可以找到LPA对应的正确PPA.</p>
+<p>2.我们并不清楚一个LPA是否真的属于某个approximate segment，故引入Conflict Resolution Buffer (CRB),即一个数组:</p>
+<ul>
+<li><strong>每次插入approximate segment时</strong>,将approximate segment中的所有LPA按升序存储到数组中.</li>
+<li>不同approximate segment的LPA序列之间用<code>null</code>隔开.</li>
+<li>不同approximate segment的LPA序列按照每个approximate segment的start LPA按升序排列.</li>
+<li>整个CRB中没有重复的LPA，<strong>插入时进行去重，若插入的segment的start LPA与CRB中已有的某个start LPA 重复,将旧者+1</strong>.</li>
+<li>approximate segment被删除时将所有元素从CRB中删去.</li>
+<li>每次查找LPA时，若发现为approximate segment，则进入CRB中二分查找到对应的LPA，并找到LPA对应的segment,并进行后续计算</li>
+</ul>
+<h5 id="4-segment的更新问题"><a href="#4-segment的更新问题" class="headerlink" title="4.segment的更新问题"></a>4.segment的更新问题</h5><p>直接更新segment，可能会导致:</p>
+<ul>
+<li><p>1.映射表的空间开销增大:</p>
+<p>例如:一个segment范围为[30, 70]，若[40, 60]需要Update，直接Update后变为:[30, 40], [40, 60], [60, 70]，若采用LSM-Tree结构,[30, 70]会被压入下一个level，仅有[30, 70], [40, 60]两项.</p>
+</li>
+<li><p>2.性能损失(即需要额外访问内存),更新Block内Page状态表需要访问Flash来确认LPA对应的正确PPA,直接Update可能会带来性能开销</p>
+</li>
+</ul>
+<p>解决方案:采用LSM-Tree结构:segment更新时直接插入(不会造成额外的空间损失),不会造成直接的额外读,将Update所需的所有更新操作积攒起来在Compaction时一次性解决(Tail Latency反而更低?)</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="C:\Users\35802\AppData\Roaming\Typora\typora-user-images\image-20231119142937070.png"
+                      alt="image-20231119142937070"
+                ></p>
+<p><strong>当且仅当Update的Segment将与其发生overleap的victim segment的所有LPA全部覆盖，才会将victim segment标记为invalid(需要额外访存更新相关meta data)，否则segment就是valid的(无需额外访存)，将其压入下一层level，等到后续主动compaction才会统一回收处理.若被压入下一层的segment依然发生overlap,则直接创建一个新的level将其放入其中，以防止递归下降.</strong></p>
+<h3 id="2-阅读ZNS-SSDs相关介绍文献，大致了解ZNS生态栈和研究方向"><a href="#2-阅读ZNS-SSDs相关介绍文献，大致了解ZNS生态栈和研究方向" class="headerlink" title="2.阅读ZNS SSDs相关介绍文献，大致了解ZNS生态栈和研究方向."></a>2.阅读ZNS SSDs相关介绍文献，大致了解ZNS生态栈和研究方向.</h3><h4 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h4><blockquote>
+<ul>
+<li>Don’t Be a Blockhead: Zoned Namespaces Make Work on Conventional SSDs Obsolete</li>
+<li>Matias Bjørling, Zoned-Namespaces-ZNS-SSDs,  SDC 2020.</li>
+<li>ZNS: Avoiding the Block Interface Tax for Flash-based SSDs</li>
+<li>ZNS+: Advanced Zoned Namespace Interface<br>for Supporting In-Storage Zone Compaction</li>
+<li>Exploring Performance Characteristics of ZNS SSDs: Observation and Implication</li>
+<li>dm-zap:<a class="link"   target="_blank" rel="noopener" href="https://github.com/westerndigitalcorporation/dm-zap" >https://github.com/westerndigitalcorporation/dm-zap <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li><a class="link"   target="_blank" rel="noopener" href="https://zonedstorage.io/" >https://zonedstorage.io/ <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+</ul>
+</blockquote>
+<h5 id="ZNS-SSDs——软件生态"><a href="#ZNS-SSDs——软件生态" class="headerlink" title="ZNS SSDs——软件生态"></a>ZNS SSDs——软件生态</h5><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="C:\Users\35802\AppData\Roaming\Typora\typora-user-images\image-20231119092629520.png"
+                      alt="image-20231119092629520"
+                ></p>
+<h5 id="ZNS-SSDs——Address-Mapping"><a href="#ZNS-SSDs——Address-Mapping" class="headerlink" title="ZNS SSDs——Address Mapping"></a>ZNS SSDs——Address Mapping</h5><p>一般是采用固定策略？由 Zone-to-FBG mapping + FCG ID 共同确定Block的具体位置,因此<strong>映射表粒度为Block</strong>.</p>
+<p><strong>映射表粒度相比传统SSDs要粗很多，所以映射表占用的DRAM远远小于传统SSDs</strong>——所以没必要动刀?</p>
+<p>从<em>ZNS+: Advanced Zoned Namespace Interface for Supporting In-Storage Zone Compaction</em>中可知,ZNS SSDs底层的逻辑地址到物理地址的映射一般是对Host透明的，一般由硬件制造商决定映射策略以最大化利用SSDs内部的并行性.一种可行的方案如下:</p>
+<p><strong>即将Block内(逻辑上连续的)Page分别stripe到不同的chip上,SSDs的每个channel可以交错访问channel上的不同chip(die).</strong></p>
+<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="C:\Users\35802\AppData\Roaming\Typora\typora-user-images\image-20231119082816431.png"
+                      alt="image-20231119082816431" style="zoom: 67%;" 
+                >
+
+<h5 id="ZNS-SSDs——GC"><a href="#ZNS-SSDs——GC" class="headerlink" title="ZNS SSDs——GC"></a>ZNS SSDs——GC</h5><h6 id="Greedy"><a href="#Greedy" class="headerlink" title="Greedy"></a>Greedy</h6><p>直接选择有效Page最少的块作为Victim. <strong>LINK-GC</strong>允许GC抢占来减少长尾延迟效应.<strong>Stable greedy</strong>以每个块上次被修改的时间为标准区分冷热块，在greedy时不选择冷的数据块.</p>
+<p><strong>总结:没有考虑wear-leveling,hot blocks更容易磨损.</strong></p>
+<h6 id="cost-benefit"><a href="#cost-benefit" class="headerlink" title="cost-benefit"></a>cost-benefit</h6><p>采用如下指标选择块:</p>
+<p>$$benefit_{CB} &#x3D; (t_{now} - B_t) * \frac{B_{inval}}{2<em>B_{valid}}  &#x3D; 距离上次修改的时间 * \frac{无效Page}{2</em>有效Page}$$</p>
+<p><strong>总结:victim-selection开销为$O(N_B)$(即块的总个数),过大.</strong></p>
+<h6 id="Fast-CB"><a href="#Fast-CB" class="headerlink" title="Fast CB"></a>Fast CB</h6><p>基于cost-benefit，但是每次victim-selection只从一小部分cost-benefit最高(近似)的class中选择</p>
+<p><strong>总结:有额外CPU开销,且维护的cost-benefit的accuracy差</strong>.</p>
+<h5 id="ZNS-SSDs——Host-based-FTL"><a href="#ZNS-SSDs——Host-based-FTL" class="headerlink" title="ZNS SSDs——Host-based FTL"></a>ZNS SSDs——Host-based FTL</h5><p>HFTL充当一般应用(有随机读写I&#x2F;O和就地更新)和ZNS SSDs(仅仅支持zone内顺序写)间的中间层.</p>
+<p>现在唯一支持ZNS SSDs的HFTL为<strong>dm-zap.</strong></p>
+<h5 id="ZNS-SSDs——模拟器"><a href="#ZNS-SSDs——模拟器" class="headerlink" title="ZNS SSDs——模拟器"></a>ZNS SSDs——模拟器</h5><h6 id="FEMU"><a href="#FEMU" class="headerlink" title="FEMU"></a>FEMU</h6><blockquote>
+<p>源码分析&#x2F;使用:<a class="link"   target="_blank" rel="noopener" href="https://jianyue.tech/posts/femu/" >https://jianyue.tech/posts/femu/ <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p>环境搭建和使用:<a class="link"   target="_blank" rel="noopener" href="https://ywang-wnlo.github.io/posts/b8506868/" >https://ywang-wnlo.github.io/posts/b8506868/ <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+</blockquote>
+<h4 id="现有研究方向"><a href="#现有研究方向" class="headerlink" title="现有研究方向"></a>现有研究方向</h4><p><strong>Zone size</strong></p>
+<blockquote>
+<ul>
+<li>Accelerating RocksDB for small-zone ZNS SSDs by parallel IO mechanism</li>
+<li>What You Can’t Forget: Exploiting Parallelism for Zoned Namespaces</li>
+<li>eZNS: An Elastic Zoned Namespace for Commodity ZNS SSDs</li>
+</ul>
+</blockquote>
+<p><em>Accelerating RocksDB for small-zone ZNS SSDs by parallel IO mechanism</em>采用小zone, 将SSTable stripe到不同的zone中以提高带宽.</p>
+<p>更小的zone, 可以减小上层采用LSM-TREE结构的应用在Compaction时数据搬移带来的写放大.</p>
+<p>但是更小的zone相比大的zone更不容易吃满带宽，无法充分利用底层的并行性, 即使增加进程, 小zone之间也很容易发生干扰(同个channel，同个die).</p>
+<p><em>What You Can’t Forget: Exploiting Parallelism for Zoned Namespaces</em>因此在Block Layer采用了一种简单的调度策略:</p>
+<ul>
+<li>选取这样的一组zone作为baseline zone，它们两两之间不会发生干扰(interference)<ul>
+<li>更具体一点?将zone1与所有其他zone的并行I&#x2F;O带宽的上下界均值作为threshold,任何超过这个threshold的都可认为与该zone无干扰</li>
+<li>得到一组CG(Conflict Groups),不同CG间的zone不会发生干扰,只有相同CG内的其他zone会干扰到当前zone的带宽</li>
+<li>对于每个传入Block Layer的bio，根据ZONE-2-CG Mapping，将bio tag上对应的CG编号.</li>
+<li>在 Block的SW queue中，计算出每个CG提交的bio，优先调度bio最少的CG.</li>
+</ul>
+</li>
+</ul>
+<p><strong>上层软件适配</strong></p>
+<blockquote>
+<ul>
+<li>Lifetime-leveling using LSM-TREE for ZNS SSD</li>
+<li>A New LSM-style Garbage Collection Scheme for ZNS SSDs</li>
+<li>ZNS: Avoiding the Block Interface Tax for Flash-based SSDs</li>
+<li>Append is Near Log-based Data Management on ZNS SSDs</li>
+<li>Compaction-aware zone allocation for LSM based key-value store on ZNS SSDs</li>
+<li>A Free-Space Adaptive Runtime Zone-Reset Algorithm for Enhanced ZNS Efficiency</li>
+</ul>
+</blockquote>
+<p>以RocksDB为例,采用LSM-TREE作为主要存储结构.当LSM-TREE需要进行Compaction时,会进行有效数据的搬移(data copy)造成写放大问题,一个优化方向就是:</p>
+<ul>
+<li><h2 id="如何调整不同SSTable在Zone上的placement，以求尽可能减少data-copy带来的写放大"><a href="#如何调整不同SSTable在Zone上的placement，以求尽可能减少data-copy带来的写放大" class="headerlink" title="如何调整不同SSTable在Zone上的placement，以求尽可能减少data copy带来的写放大"></a><strong>如何调整不同SSTable在Zone上的placement，以求尽可能减少data copy带来的写放大</strong></h2></li>
+<li><strong>当空间不足进行Zone Reclaim时，也需要进行Zone Cleaning(选择zone清空,并进行上述data copy的操作),这样会造成前台I&#x2F;O堵塞,吞吐&#x2F;带宽下降</strong><ul>
+<li><em>Compaction-aware zone allocation for LSM based key-value store on ZNS SSDs</em>:提前reset那些WP前所有空间都已经invalid的zone，这样能尽可能减少ZC的出现次数.<strong>可能会加剧SSD的损耗</strong></li>
+<li><em>A Free-Space Adaptive Runtime Zone-Reset Algorithm for Enhanced ZNS Efficiency</em>:根据SSD剩余空闲空间,动态reset那些WP前所有空间都已经invalid的zone.<strong>保证性能的前提下提高寿命</strong></li>
+</ul>
+</li>
+</ul>
+<h3 id="3-如何应用学习型技巧到ZNS-SSDs-的FTL-上"><a href="#3-如何应用学习型技巧到ZNS-SSDs-的FTL-上" class="headerlink" title="3.如何应用学习型技巧到ZNS SSDs(的FTL)上?"></a>3.如何应用学习型技巧到ZNS SSDs(的FTL)上?</h3><p>我的问题:</p>
+<ul>
+<li><p>ZNS有FTL这种东西吗？Address Mapping&#x2F;GC 有性能提升的地方&#x2F;可能吗?</p>
+<p><strong>我觉得ZNS SSDs淡化了FTL这个概念.</strong></p>
+<p>传统SSDs的需要的地址转换, 垃圾回收， 磨损均衡等其他功能，都是集成在FTL上由Device段的FTL独自完成的，所以有FTL这种概念</p>
+<p><strong>但ZNS SSDs把上述职责分散开来</strong>, Device可以做地址转换&#x2F;磨损均衡, 而ZONE的分配和回收等工作由Host段的上层软件根据工作情况灵活调整.ZNS SSDs不谈FTL，更多地是向细化的各项功能去探讨其改进可能性</p>
+<ul>
+<li>地址转换&#x2F;磨损均衡?<ul>
+<li>通常是Fix的策略，一般是简单地直接stripe到多个die上提高并行性</li>
+<li>有什么能改进的地方吗？能用学习型技巧改进吗？:不清楚，搜寻多个文献，貌似不是热点</li>
+</ul>
+</li>
+<li>ZONE的分配与管理<ul>
+<li>ZONE的大小</li>
+<li>怎么分配ZONE</li>
+<li>怎么回收ZONE</li>
+<li>学习型技巧?</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>体系结构上常用的学习型(Machine Learning)方法有哪些?</strong></p>
+<blockquote>
+<p>A Survey of Machine Learning for Computer Architecture</p>
+</blockquote>
+<p>老师给的目标是将”学习型”技巧应用到ZNS SSDs的FTL上(提高Address Mapping乃至GC的效率)</p>
+<p>首先ZNS不讲FTL这个概念，FTL的功能都被细分开来，一般是SSD负责地址映射和磨损均衡，上层负责zone的管理</p>
+<p>如果要用学习型技巧提高所谓Address Mapping的效率. </p>
+<p>如果要优化读写&#x2F;空间效率:ZNS SSD的映射表空间开销极小,不需要什么”学习型”来优化.</p>
+<p>如果要优化physical zone的排布方式来提高parallelism，我觉得ZNS+那篇简单stripe到不同chip上来提高parallelism这样简单的方法就好,也不用什么学习型来做.</p>
+<p><strong>对于ZNS内部</strong>的zone-2-block地址映射，没有改进必要</p>
+<hr>
+
+        </div>
+
+        
+            <div class="post-copyright-info my-8 px-2 sm:px-6 md:px-8">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li><strong>Title:</strong> 月度总结</li>
+        <li><strong>Author:</strong> yeyeye</li>
+        <li><strong>Created at
+                :</strong> 2023-11-26 17:00:36</li>
+        
+            <li>
+                <strong>Updated at
+                    :</strong> 2023-11-26 17:01:54
+            </li>
+        
+        <li>
+            <strong>Link:</strong> https://redefine.ohevan.com/2023/11/26/月度总结/
+        </li>
+        <li>
+            <strong>
+                License:
+            </strong>
+            
+
+            
+                This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a>.
+            
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+
+        
+
+        
+
+
+        
+            <div class="comment-container px-2 sm:px-6 md:px-8 pb-8">
+                <div class="comments-container pjax">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fa-solid fa-comments"></i>&nbsp;Comments
+    </div>
+    
+
+        
+            
+    <div id="waline"></div>
+    <script type="module" data-swup-reload-script>
+      import { init } from '/js/libs/waline.mjs';
+
+      function loadWaline() {
+        init({
+          el: '#waline',
+          serverURL: 'https://example.example.com',
+          lang: 'zh-CN',
+          dark: 'body[class~="dark-mode"]',
+          requiredMeta: ['nick', 'mail']
+        });
+      }
+
+      if (typeof swup !== 'undefined') {
+        loadWaline();
+      } else {
+        window.addEventListener('DOMContentLoaded', loadWaline);
+      }
+    </script>
+
+
+
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+
+    
+        <div class="toc-content-container">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">On this page</div>
+        <div class="page-title">月度总结</div>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%88%E5%88%9D%E7%9B%AE%E6%A0%87"><span class="nav-text">月初目标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%A5%E4%BD%9C%E5%86%85%E5%AE%B9"><span class="nav-text">工作内容</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E9%98%85%E8%AF%BBLeaFTL%E5%8F%8A%E5%85%B6%E6%BA%90%E7%A0%81%EF%BC%8C%E4%BA%86%E8%A7%A3%E7%9B%B8%E5%85%B3%E6%8A%80%E6%9C%AF%E8%83%8C%E6%99%AF%E5%92%8C%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86"><span class="nav-text">1.阅读LeaFTL及其源码，了解相关技术背景和基本原理.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E9%98%85%E8%AF%BBZNS-SSDs%E7%9B%B8%E5%85%B3%E4%BB%8B%E7%BB%8D%E6%96%87%E7%8C%AE%EF%BC%8C%E5%A4%A7%E8%87%B4%E4%BA%86%E8%A7%A3ZNS%E7%94%9F%E6%80%81%E6%A0%88%E5%92%8C%E7%A0%94%E7%A9%B6%E6%96%B9%E5%90%91"><span class="nav-text">2.阅读ZNS SSDs相关介绍文献，大致了解ZNS生态栈和研究方向.</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E8%B0%83%E6%95%B4%E4%B8%8D%E5%90%8CSSTable%E5%9C%A8Zone%E4%B8%8A%E7%9A%84placement%EF%BC%8C%E4%BB%A5%E6%B1%82%E5%B0%BD%E5%8F%AF%E8%83%BD%E5%87%8F%E5%B0%91data-copy%E5%B8%A6%E6%9D%A5%E7%9A%84%E5%86%99%E6%94%BE%E5%A4%A7"><span class="nav-text">如何调整不同SSTable在Zone上的placement，以求尽可能减少data copy带来的写放大</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E5%A6%82%E4%BD%95%E5%BA%94%E7%94%A8%E5%AD%A6%E4%B9%A0%E5%9E%8B%E6%8A%80%E5%B7%A7%E5%88%B0ZNS-SSDs-%E7%9A%84FTL-%E4%B8%8A"><span class="nav-text">3.如何应用学习型技巧到ZNS SSDs(的FTL)上?</span></a></li></ol></li></ol>
+
+    </div>
+</div>
+        </div>
+    
+</div>
+
+
+
+                
+
+            </div>
+
+            
+
+        </div>
+
+        <div class="main-content-footer">
+            <footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2022</span>
+              -
+            
+            2023&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">yeyeye</a>
+        </div>
+        
+            <script data-swup-reload-script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">VISITOR COUNT</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">TOTAL PAGE VIEWS</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">POWERED BY <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a></span>
+            <span class="text-sm lg:block">THEME&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.5.6</a></span>
+        </div>
+        
+        
+            <div>
+                Blog up for <span class="odometer" id="runtime_days" ></span> days <span class="odometer" id="runtime_hours"></span> hrs <span class="odometer" id="runtime_minutes"></span> Min <span class="odometer" id="runtime_seconds"></span> Sec
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fa-regular fa-comments"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-side-tools-container">
+        <div class="side-tools-container">
+    <ul class="hidden-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="visible-tools-list">
+        <li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+
+</main>
+
+
+    
+<script src="/js/libs/Swup.min.js"></script>
+
+<script src="/js/libs/SwupSlideTheme.min.js"></script>
+
+<script src="/js/libs/SwupScriptsPlugin.min.js"></script>
+
+<script src="/js/libs/SwupProgressPlugin.min.js"></script>
+
+<script src="/js/libs/SwupScrollPlugin.min.js"></script>
+
+<script src="/js/libs/SwupPreloadPlugin.min.js"></script>
+
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+</script>
+
+
+
+
+
+
+
+<script src="/js/tools/imageViewer.js" type="module"></script>
+
+<script src="/js/utils.js" type="module"></script>
+
+<script src="/js/main.js" type="module"></script>
+
+<script src="/js/layouts/navbarShrink.js" type="module"></script>
+
+<script src="/js/tools/scrollTopBottom.js" type="module"></script>
+
+<script src="/js/tools/lightDarkSwitch.js" type="module"></script>
+
+<script src="/js/layouts/categoryList.js" type="module"></script>
+
+
+
+
+
+    
+<script src="/js/tools/codeBlock.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/layouts/lazyload.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/tools/runtime.js"></script>
+
+    
+<script src="/js/libs/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/assets/odometer-theme-minimal.css">
+
+
+
+
+  
+<script src="/js/libs/Typed.min.js"></script>
+
+  
+<script src="/js/plugins/typed.js" type="module"></script>
+
+
+
+
+
+
+
+<div class="post-scripts" data-swup-reload-script>
+    
+        
+<script src="/js/libs/anime.min.js"></script>
+
+        
+<script src="/js/tools/tocToggle.js" type="module"></script>
+
+<script src="/js/layouts/toc.js" type="module"></script>
+
+<script src="/js/plugins/tabs.js" type="module"></script>
+
+    
+</div>
+
+
+</body>
+</html>
